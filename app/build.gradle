@@ -35,4 +35,5 @@ dependencies {
     compile 'com.android.support:preference-v7:24.2.1'
     compile 'com.rarepebble:colorpicker:1.7.0'
     compile 'com.android.support:support-v4:24.2.1'
+    compile project(path: ':xml_rpc')
 }

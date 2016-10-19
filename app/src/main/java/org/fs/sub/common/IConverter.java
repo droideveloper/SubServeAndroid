@@ -1,3 +1,18 @@
+/*
+ * SubServe Android Copyright (C) 2016 Fatih.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
 package org.fs.sub.common;
 
 import org.fs.sub.model.SrtEntity;
@@ -8,35 +23,29 @@ import java.util.LinkedList;
 import rx.Observable;
 import rx.functions.Action1;
 
-/**
- * Created by Fatih on
- * as org.fs.sub.common.IConverter
- */
 public interface IConverter {
 
-    /**
-     *
-     * @param entity
-     * @return
-     */
-    Observable<LinkedList<SrtSequenceEntity>>   withSrtEntity(SrtEntity entity);
+  /**
+   *
+   * @param entity
+   * @return
+   */
+  Observable<LinkedList<SrtSequenceEntity>> withSrtEntity(SrtEntity entity);
 
-    /**
-     *
-     * @return
-     */
-    Action1<LinkedList<SrtSequenceEntity>>      onSuccess();
+  /**
+   *
+   * @return
+   */
+  Action1<LinkedList<SrtSequenceEntity>> onSuccess();
 
-    /**
-     *
-     * @return
-     */
-    Action1<Throwable>                          onError();
+  /**
+   *
+   * @return
+   */
+  Action1<Throwable> onError();
 
-
-    /**
-     *
-     */
-    void                                        convert();
-
+  /**
+   *
+   */
+  void convert();
 }

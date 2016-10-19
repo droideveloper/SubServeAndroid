@@ -1,40 +1,45 @@
+/*
+ * SubServe Android Copyright (C) 2016 Fatih.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
 package org.fs.sub.presenter;
 
 import android.os.Bundle;
 
 import java.io.IOException;
+import org.fs.common.IPresenter;
 
-/**
- * Created by Fatih o
- * as org.fs.sub.presenter.ILoginServiceViewPresenter
- */
-public interface ILoginServiceViewPresenter {
+public interface ILoginServiceViewPresenter extends IPresenter {
 
-    /**
-     *
-     * @param userName
-     * @param password
-     * @throws IOException
-     */
-    void withUserNameAndPassword(String userName, String password) throws IOException;
+  /**
+   * @throws IOException
+   */
+  void withUserNameAndPassword(String userName, String password) throws IOException;
 
-    /**
-     *
-     * @param token
-     * @throws IOException
-     */
-    void withSessionToken(String token) throws IOException;
+  /**
+   * @throws IOException
+   */
+  void withSessionToken(String token) throws IOException;
 
-    /**
-     *
-     * @param token
-     * @throws IOException
-     */
-    void withTerminateSession(String token) throws IOException;
+  /**
+   * @throws IOException
+   */
+  void withTerminateSession(String token) throws IOException;
 
-    /**
-     *
-     * @param args
-     */
-    void onCommand(Bundle args);
+  /**
+   *
+   * @param args
+   */
+  void onCommand(Bundle args);
 }

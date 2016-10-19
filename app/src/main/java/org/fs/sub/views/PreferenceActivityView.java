@@ -1,3 +1,18 @@
+/*
+ * SubServe Android Copyright (C) 2016 Fatih.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
 package org.fs.sub.views;
 
 import android.Manifest;
@@ -22,77 +37,67 @@ import org.fs.sub.SubServeApplication;
 import org.fs.sub.R;
 import org.fs.sub.view.IPreferenceActivityView;
 
-/**
- * Created by Fatih on
- * as org.fs.sub.views.PreferenceView
- */
 public class PreferenceActivityView extends AbstractActivity implements IPreferenceActivityView {
 
-    private final static int REQUEST_CODE = 0x01;
+  private final static int REQUEST_CODE = 0x01;
 
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_preference);
-        Toolbar toolbar = (Toolbar)findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+  @Override public void onCreate(Bundle savedInstanceState) {
+    super.onCreate(savedInstanceState);
+    setContentView(R.layout.activity_preference);
+    Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+    setSupportActionBar(toolbar);
+  }
+
+  @Override protected void onPostCreate(@Nullable Bundle savedInstanceState) {
+    super.onPostCreate(savedInstanceState);
+    ActionBar supportActionBar = getSupportActionBar();
+    //don't want to show this
+    if (supportActionBar != null) {
+      supportActionBar.setDisplayShowTitleEnabled(false);
+    }
+    //need to show this since OpenSubtitle.org asks us to do
+    View view = findViewById(R.id.redirectView);
+    if (view != null) {
+
+    }
+    //checks if we have permission from user
+    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+      checkPermissionAlertWindow();
     }
 
-    @Override
-    protected void onPostCreate(@Nullable Bundle savedInstanceState) {
-        super.onPostCreate(savedInstanceState);
-        ActionBar supportActionBar = getSupportActionBar();
-        //don't want to show this
-        if(supportActionBar != null) {
-            supportActionBar.setDisplayShowTitleEnabled(false);
-        }
-        //need to show this since OpenSubtitle.org asks us to do
-        View view = findViewById(R.id.redirectView);
-        if(view != null) {
-
-        }
-        //checks if we have permission from user
-        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            checkPermissionAlertWindow();
-        }
-
-        if(PackageManager.PERMISSION_GRANTED != ContextCompat.checkSelfPermission(this, Manifest.permission.READ_EXTERNAL_STORAGE)) {
-            ActivityCompat.requestPermissions(this, new String[] { Manifest.permission.READ_EXTERNAL_STORAGE}, 0x0);
-        }
+    if (PackageManager.PERMISSION_GRANTED != ContextCompat.checkSelfPermission(this, Manifest.permission.READ_EXTERNAL_STORAGE)) {
+      ActivityCompat.requestPermissions(this,
+          new String[] { Manifest.permission.READ_EXTERNAL_STORAGE }, 0x0);
     }
+  }
 
-    @Override
-    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
-        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
-    }
+  @Override public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions,
+      @NonNull int[] grantResults) {
+    super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+  }
 
-    @TargetApi(Build.VERSION_CODES.M)
-    private void checkPermissionAlertWindow() {
-        if(!Settings.canDrawOverlays(this)) {
-            Intent intent = new Intent(Settings.ACTION_MANAGE_OVERLAY_PERMISSION,
-                                       Uri.parse("package:" + getPackageName()));
-            startActivityForResult(intent, REQUEST_CODE);
-        }
+  @TargetApi(Build.VERSION_CODES.M) private void checkPermissionAlertWindow() {
+    if (!Settings.canDrawOverlays(this)) {
+      Intent intent = new Intent(Settings.ACTION_MANAGE_OVERLAY_PERMISSION, Uri.parse("package:" + getPackageName()));
+      startActivityForResult(intent, REQUEST_CODE);
     }
+  }
 
-    @TargetApi(Build.VERSION_CODES.M)
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-        if(requestCode == REQUEST_CODE) {
-            if(Settings.canDrawOverlays(this)) {
-                log(Log.INFO, "we got the permission of SYSTEM_WINDOW_ALERT one ;)");
-            }
-        }
+  @TargetApi(Build.VERSION_CODES.M) @Override
+  protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+    super.onActivityResult(requestCode, resultCode, data);
+    if (requestCode == REQUEST_CODE) {
+      if (Settings.canDrawOverlays(this)) {
+        log(Log.INFO, "we got the permission of SYSTEM_WINDOW_ALERT one ;)");
+      }
     }
+  }
 
-    @Override
-    protected String getClassTag() {
-        return PreferenceActivityView.class.getSimpleName();
-    }
+  @Override protected String getClassTag() {
+    return PreferenceActivityView.class.getSimpleName();
+  }
 
-    @Override
-    protected boolean isLogEnabled() {
-        return SubServeApplication.isApplicationLogEnabled();
-    }
+  @Override protected boolean isLogEnabled() {
+    return SubServeApplication.isApplicationLogEnabled();
+  }
 }

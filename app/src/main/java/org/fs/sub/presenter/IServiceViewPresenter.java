@@ -1,86 +1,88 @@
+/*
+ * SubServe Android Copyright (C) 2016 Fatih.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
 package org.fs.sub.presenter;
 
 import android.content.Intent;
 import android.net.Uri;
+import org.fs.common.IPresenter;
 
-/**
- * Created by Fatih o
- * as org.fs.sub.presenters.IServicePresenter
- */
-public interface IServiceViewPresenter {
+public interface IServiceViewPresenter  extends IPresenter {
 
-    /**
-     *
-     * @param intent
-     */
-    void handleIntent(Intent intent);
+  /**
+   *
+   * @param intent
+   */
+  void handleIntent(Intent intent);
 
-    /**
-     *
-     * @param elapsedTime
-     */
-    void setElapsedTime(long elapsedTime);
+  /**
+   *
+   * @param elapsedTime
+   */
+  void setElapsedTime(long elapsedTime);
 
-    /**
-     *
-     * @return
-     */
-    long elapsedTime();
+  /**
+   *
+   * @return
+   */
+  long elapsedTime();
 
-    /**
-     *
-     * @param uri
-     */
-    void setSearchUri(Uri uri);
+  /**
+   *
+   * @param uri
+   */
+  void setSearchUri(Uri uri);
 
-    /**
-     *
-     * @param imdb
-     */
-    void setSearchImdb(String imdb);
+  /**
+   *
+   * @param imdb
+   */
+  void setSearchImdb(String imdb);
 
-    /**
-     *
-     */
-    void notifyElapsedChanged();
+  /**
+   *
+   */
+  void notifyElapsedChanged();
 
-    /**
-     *
-     */
-    void startShow();
+  /**
+   *
+   */
+  void startShow();
 
-    /**
-     *
-     */
-    void stopShow();
+  /**
+   *
+   */
+  void stopShow();
 
-    /**
-     *
-     */
-    void pauseShow();
+  /**
+   *
+   */
+  void pauseShow();
 
-    /**
-     *
-     */
-    void resumeShow();
+  /**
+   *
+   */
+  void resumeShow();
 
-    /**
-     * context callback onCreate
-     */
-    void onCreate();
+  /**
+   * context callback onCreate
+   */
+  void onCreate();
 
-    /**
-     * context callback onResume
-     */
-    void onResume();
-
-    /**
-     * context callback onPause
-     */
-    void onPause();
-
-    /**
-     * context callback onDestroy
-     */
-    void onDestroy();
+  /**
+   * context callback onDestroy
+   */
+  void onDestroy();
 }
