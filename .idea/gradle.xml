@@ -11,7 +11,7 @@
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/core" />
             <option value="$PROJECT_DIR$/subserve_api" />
-            <option value="$PROJECT_DIR$/xmlrpc_client" />
+            <option value="$PROJECT_DIR$/xml_rpc" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

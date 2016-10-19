@@ -6,7 +6,7 @@
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/core/core.iml" filepath="$PROJECT_DIR$/core/core.iml" />
       <module fileurl="file://$PROJECT_DIR$/subserve_api/subserve_api.iml" filepath="$PROJECT_DIR$/subserve_api/subserve_api.iml" />
-      <module fileurl="file://$PROJECT_DIR$/xmlrpc_client/xmlrpc_client.iml" filepath="$PROJECT_DIR$/xmlrpc_client/xmlrpc_client.iml" />
+      <module fileurl="file://$PROJECT_DIR$/xml_rpc/xml_rpc.iml" filepath="$PROJECT_DIR$/xml_rpc/xml_rpc.iml" />
     </modules>
   </component>
 </project>

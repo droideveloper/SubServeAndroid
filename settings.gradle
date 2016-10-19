@@ -1,1 +1,1 @@
-include ':app', ':core', ':xmlrpc_client', ':subserve_api'
+include ':app', ':core', ':xml_rpc', ':subserve_api'
