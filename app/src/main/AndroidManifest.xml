@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest package="org.fs.sub"
+          xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <application
+        android:name=".SubServeApplication"
+        android:allowBackup="true"
+        android:hardwareAccelerated="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <!-- User Preference -->
+        <activity android:name=".views.PreferenceActivityView"
+                  android:configChanges="keyboardHidden|screenSize|orientation">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".views.BrowserView"
+                  android:configChanges="keyboardHidden|screenSize|orientation"
+                  android:theme="@style/AppThemeDark">
+
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:scheme="subServe"
+                      android:host="browse"
+                      android:path="/" />
+            </intent-filter>
+
+        </activity>
+
+        <!-- App to App communication channel -->
+        <receiver
+            android:name=".views.BridgeBroadcastView">
+            <intent-filter>
+                <action android:name="org.fs.sub.action.ACTION_SHOW" />
+                <category android:name="org.fs.sub.category.CATEGORY_BROWSE" />
+            </intent-filter>
+        </receiver>
+
+        <!-- Session Service, IntentService -->
+        <service
+            android:name=".views.LoginServiceView"
+            android:exported="false"/>
+
+        <!-- Service that handles View operations -->
+        <service
+            android:name=".views.ServiceView"
+            android:exported="false"/>
+
+        <!--
+            <intent-filter>
+                <action android:name="org.fs.sub.action.VIEW"/>
+
+                <category android:name="org.fs.sub.category.DEFAULT"/>
+                <category android:name="org.fs.sub.category.BROWSABLE"/>
+
+                <data
+                    android:host="start"
+                    android:path="/"
+                    android:scheme="subServe"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="org.fs.sub.action.VIEW"/>
+
+                <category android:name="org.fs.sub.category.DEFAULT"/>
+                <category android:name="org.fs.sub.category.BROWSABLE"/>
+
+                <data
+                    android:host="stop"
+                    android:path="/"
+                    android:scheme="subServe"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="org.fs.sub.action.VIEW"/>
+
+                <category android:name="org.fs.sub.category.DEFAULT"/>
+                <category android:name="org.fs.sub.category.BROWSABLE"/>
+
+                <data
+                    android:host="timeElapsed"
+                    android:path="/"
+                    android:scheme="subServe"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="org.fs.sub.action.VIEW"/>
+
+                <category android:name="org.fs.sub.category.DEFAULT"/>
+                <category android:name="org.fs.sub.category.BROWSABLE"/>
+
+                <data
+                    android:host="search"
+                    android:path="/"
+                    android:scheme="subServe"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="org.fs.sub.action.VIEW"/>
+
+                <category android:name="org.fs.sub.category.DEFAULT"/>
+                <category android:name="org.fs.sub.category.BROWSABLE"/>
+
+                <data
+                    android:host="pause"
+                    android:path="/"
+                    android:scheme="subServe"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="org.fs.sub.action.VIEW"/>
+
+                <category android:name="org.fs.sub.category.DEFAULT"/>
+                <category android:name="org.fs.sub.category.BROWSABLE"/>
+
+                <data
+                    android:host="resume"
+                    android:path="/"
+                    android:scheme="subServe"/>
+            </intent-filter>
+        </receiver>
+        -->
+
+    </application>
+
+</manifest>

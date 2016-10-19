@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v7.preference.PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <android.support.v7.preference.PreferenceCategory
+        android:title="@string/setting_category">
+
+        <android.support.v7.preference.SwitchPreferenceCompat
+            android:title="@string/notify_title"
+            android:summary="@string/notify_summary"
+            android:defaultValue="false"
+            android:key="checkNotify" />
+
+        <android.support.v7.preference.ListPreference
+            android:title="@string/language_title"
+            android:summary="@string/language_summary"
+            android:entries="@array/language_entries"
+            android:entryValues="@array/language_values"
+            android:defaultValue="eng"
+            android:key="listLanguage" />
+
+        <android.support.v7.preference.ListPreference
+            android:title="@string/text_size_title"
+            android:summary="@string/text_size_summary"
+            android:entries="@array/text_size_entries"
+            android:entryValues="@array/text_size_values"
+            android:defaultValue="16"
+            android:key="listTextSize" />
+
+        <org.fs.sub.common.ColorPreference
+            android:key="textColor"
+            android:title="@string/text_color_title"
+            android:summary="@string/text_color_summary"
+            app:colorpicker_defaultColor="#ffffff" />
+
+        <android.support.v7.preference.ListPreference
+            android:title="@string/text_alignment_title"
+            android:summary="@string/text_alignment_summary"
+            android:entries="@array/text_alignment_entries"
+            android:entryValues="@array/text_alignment_values"
+            android:defaultValue="bottom"
+            android:key="textAlignment" />
+
+    </android.support.v7.preference.PreferenceCategory>
+
+
+    <android.support.v7.preference.PreferenceCategory
+        android:title="@string/user_category">
+
+        <android.support.v7.preference.EditTextPreference
+            android:title="@string/user_name_title"
+            android:summary="@string/user_name_summary"
+            android:key="txtUserName"
+            android:imeOptions="actionDone"
+            android:singleLine="true"
+            android:ellipsize="end"
+            style="@style/UserNameEditTextDialogStyle"
+            android:inputType="textEmailAddress" />
+
+        <android.support.v7.preference.EditTextPreference
+            android:title="@string/password_title"
+            android:summary="@string/password_summary"
+            android:key="txtPassword"
+            android:singleLine="true"
+            android:ellipsize="end"
+            style="@style/PasswordEditTextDialogStyle"
+            android:imeOptions="actionDone"
+            android:inputType="textPassword" />
+
+    </android.support.v7.preference.PreferenceCategory>
+
+
+
+</android.support.v7.preference.PreferenceScreen>

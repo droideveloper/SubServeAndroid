@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="language_entries">
+        <item>Afrikaans</item>
+        <item>Albanais</item>
+        <item>Arabe</item>
+        <item>Arménien</item>
+        <item>Basque</item>
+        <item>Belarusian</item>
+        <item>Bengali</item>
+        <item>Bosniaque</item>
+        <item>Breton</item>
+        <item>Bulgare</item>
+        <item>Burmese</item>
+        <item>Catalan</item>
+        <item>Chinese (simplified)</item>
+        <item>Chinese (traditional)</item>
+        <item>Chinese bilingual</item>
+        <item>Croate</item>
+        <item>Tchèque</item>
+        <item>Danois</item>
+        <item>Néerlandais</item>
+        <item>Anglais</item>
+        <item>Esperanto</item>
+        <item>Estonien</item>
+        <item>Finlandais</item>
+        <item>Français</item>
+        <item>Galician</item>
+        <item>Georgian</item>
+        <item>Allemand</item>
+        <item>Grec</item>
+        <item>Hebreu</item>
+        <item>Hindi</item>
+        <item>Hongrois</item>
+        <item>Icelandic</item>
+        <item>Indonésien</item>
+        <item>Italien</item>
+        <item>Japonais</item>
+        <item>Kazakh</item>
+        <item>Khmer</item>
+        <item>Coréen</item>
+        <item>Letton</item>
+        <item>Lituanien</item>
+        <item>Luxembourgeois</item>
+        <item>Macédonien</item>
+        <item>Malay</item>
+        <item>Malayalam</item>
+        <item>Manipuri</item>
+        <item>Mongolian</item>
+        <item>Montenegrin</item>
+        <item>Norvégien</item>
+        <item>Occitan</item>
+        <item>Perse</item>
+        <item>Polonais</item>
+        <item>Portugais</item>
+        <item>Portuguese (BR)</item>
+        <item>Roumain</item>
+        <item>Russe</item>
+        <item>Serbe</item>
+        <item>Sinhalese</item>
+        <item>Slovaque</item>
+        <item>Slovène</item>
+        <item>Espagnol</item>
+        <item>Swahili</item>
+        <item>Suédois</item>
+        <item>Syriac</item>
+        <item>Tagalog</item>
+        <item>Tamil</item>
+        <item>Telugu</item>
+        <item>Thaï</item>
+        <item>Turc</item>
+        <item>Ukrainien</item>
+        <item>Urdu</item>
+        <item>Vietnamien</item>
+    </string-array>
+</resources>

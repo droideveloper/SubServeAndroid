@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">SubServe</string>
+    <string name="user_name_title">User Name</string>
+    <string name="user_name_summary">User Name for account (optional)</string>
+    <string name="password_title">Password</string>
+    <string name="password_summary">Password for account (optional)</string>
+    <string name="user_category">User</string>
+    <string name="setting_category">Settings</string>
+    <string name="notify_title">Notify</string>
+    <string name="notify_summary">Shows notification for user give her/his consent to start show</string>
+    <string name="language_title">Languages</string>
+    <string name="language_summary">Selected language(s) will be used for searching subtitles</string>
+    <string name="text_size_title">Text Size</string>
+    <string name="text_size_summary">Text Size will be used for content text size</string>
+    <string name="text_color_title">Text Color</string>
+    <string name="text_color_summary">Text Color will be used for content text</string>
+    <string name="text_alignment_title">Text Alignment</string>
+    <string name="text_alignment_summary">Text Alignment will be used for content text</string>
+
+    <string name="text_notification_stop_title">Stop SubServe</string>
+    <string name="text_notification_stop_content">SubServe is started, if you wish to stop you can click here.</string>
+</resources>

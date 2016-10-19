@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="language_entries">
+        <item>Afrikaans</item>
+        <item>Albanisch</item>
+        <item>Arabisch</item>
+        <item>Armenisch</item>
+        <item>Basque</item>
+        <item>Belarusian</item>
+        <item>Bengali</item>
+        <item>Bosnisch</item>
+        <item>Breton</item>
+        <item>Bulgarisch</item>
+        <item>Burmese</item>
+        <item>Katalanisch</item>
+        <item>Chinese (simplified)</item>
+        <item>Chinese (traditional)</item>
+        <item>Chinese bilingual</item>
+        <item>Kroatisch</item>
+        <item>Tschechisch</item>
+        <item>Dänisch</item>
+        <item>Niederländisch</item>
+        <item>Englisch</item>
+        <item>Esperanto</item>
+        <item>Estnisch</item>
+        <item>Finnisch</item>
+        <item>Französisch</item>
+        <item>Galician</item>
+        <item>Georgian</item>
+        <item>Deutsch</item>
+        <item>Griechisch</item>
+        <item>Hebräisch</item>
+        <item>Hindi</item>
+        <item>Ungarisch</item>
+        <item>Icelandic</item>
+        <item>Indonesisch</item>
+        <item>Italienisch</item>
+        <item>Japanisch</item>
+        <item>Kasachisch</item>
+        <item>Khmer</item>
+        <item>Koreanisch</item>
+        <item>Lettisch</item>
+        <item>Litauisch</item>
+        <item>Luxemburgisch</item>
+        <item>Mazedonisch</item>
+        <item>Malay</item>
+        <item>Malayalam</item>
+        <item>Manipuri</item>
+        <item>Mongolian</item>
+        <item>Montenegrin</item>
+        <item>Norwegisch</item>
+        <item>Occitan</item>
+        <item>Persisch</item>
+        <item>Polnisch</item>
+        <item>Portugiesisch</item>
+        <item>Portuguese (BR)</item>
+        <item>Rumänisch</item>
+        <item>Russisch</item>
+        <item>Serbisch</item>
+        <item>Sinhalese</item>
+        <item>Slowakisch</item>
+        <item>Slowenisch</item>
+        <item>Spanisch</item>
+        <item>Swahili</item>
+        <item>Schwedisch</item>
+        <item>Syriac</item>
+        <item>Tagalog</item>
+        <item>Tamil</item>
+        <item>Telugu</item>
+        <item>Thai</item>
+        <item>Türkisch</item>
+        <item>Ukrainisch</item>
+        <item>Urdu</item>
+        <item>Vietnamesisch</item>
+    </string-array>
+</resources>

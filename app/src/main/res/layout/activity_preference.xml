@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+   <android.support.v7.widget.Toolbar
+       android:id="@+id/toolbar"
+       android:background="@color/colorPrimary"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content" />
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_below="@id/toolbar"
+       android:orientation="vertical"
+       android:layout_height="match_parent">
+
+        <fragment
+            android:tag="preferanceFragment"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            class="org.fs.sub.views.PreferenceFragmentView"/>
+
+
+        <ImageView
+            android:id="@+id/redirectView"
+            android:layout_width="wrap_content"
+            android:scaleType="fitXY"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:layout_margin="5dp"
+            android:src="@mipmap/logo_transparent"
+            android:layout_height="wrap_content"/>
+
+   </LinearLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,35 @@
+#
+# generated on 2016/05/13 03:17:12
+#
+# --table-start--
+dataClass=org.fs.sub.model.SrtEntity
+tableName=srt
+# --table-fields-start--
+# --field-start--
+fieldName=id
+generatedId=true
+# --field-end--
+# --field-start--
+fieldName=hash
+columnName=hash
+# --field-end--
+# --field-start--
+fieldName=name
+columnName=name
+# --field-end--
+# --field-start--
+fieldName=lang
+columnName=lang
+# --field-end--
+# --field-start--
+fieldName=imdb
+columnName=imdb_id
+# --field-end--
+# --field-start--
+fieldName=data
+columnName=data
+dataPersister=BYTE_ARRAY
+# --field-end--
+# --table-fields-end--
+# --table-end--
+#################################

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="language_entries">
+        <item>Afrikaans</item>
+        <item>Arnavutça</item>
+        <item>Arapça</item>
+        <item>Ermenice</item>
+        <item>Basque</item>
+        <item>Belarusian</item>
+        <item>Bengali</item>
+        <item>Bosna Dili</item>
+        <item>Breton</item>
+        <item>Bulgarca</item>
+        <item>Burmese</item>
+        <item>Katalanca</item>
+        <item>Chinese (simplified)</item>
+        <item>Chinese (traditional)</item>
+        <item>Chinese bilingual</item>
+        <item>Hırvatça</item>
+        <item>Çekçe</item>
+        <item>Danimarkaca</item>
+        <item>Flemenkçe</item>
+        <item>İngilizce</item>
+        <item>Esperanto</item>
+        <item>Estonya Dili</item>
+        <item>Fince</item>
+        <item>Fransızca</item>
+        <item>Galician</item>
+        <item>Georgian</item>
+        <item>Almanca</item>
+        <item>Yunanca</item>
+        <item>İbranice</item>
+        <item>Hindi</item>
+        <item>Macarca</item>
+        <item>Icelandic</item>
+        <item>Endonezya Dili</item>
+        <item>İtalyanca</item>
+        <item>Japonca</item>
+        <item>Kazakça</item>
+        <item>Khmer</item>
+        <item>Korece</item>
+        <item>Letonya Dili</item>
+        <item>Lintvanya Dili</item>
+        <item>Lüksemburg Dili</item>
+        <item>Makedonca</item>
+        <item>Malay</item>
+        <item>Malayalam</item>
+        <item>Manipuri</item>
+        <item>Mongolian</item>
+        <item>Montenegrin</item>
+        <item>Norveççe</item>
+        <item>Occitan</item>
+        <item>Farsça</item>
+        <item>Polonyaca</item>
+        <item>Portekizce</item>
+        <item>Portekizce (BR)</item>
+        <item>Rumence</item>
+        <item>Rusça</item>
+        <item>Sırpça</item>
+        <item>Sinhalese</item>
+        <item>Slovakça</item>
+        <item>Slovence</item>
+        <item>İspanyolca</item>
+        <item>Swahili</item>
+        <item>İsveççe</item>
+        <item>Syriac</item>
+        <item>Tagalog</item>
+        <item>Tamil</item>
+        <item>Telugu</item>
+        <item>Tai Dili</item>
+        <item>Türkçe</item>
+        <item>Ukraynaca</item>
+        <item>Urdu</item>
+        <item>Vietnam Dili</item>
+    </string-array>
+
+    <string-array name="text_alignment_entries">
+        <item>Yukarı</item>
+        <item>Orta</item>
+        <item>Aşağı</item>
+    </string-array>
+</resources>

@@ -1,0 +1,52 @@
+<resources>
+
+    <style name="BaseAppTheme" parent="Theme.AppCompat.Light">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="preferenceTheme">@style/PreferenceThemeOverlay</item>
+    </style>
+
+    <!-- this theme let me run activity without disturbing user with UI -->
+    <style name="ActivityWithoutDisplayTheme" parent="AppTheme">
+        <item name="android:windowBackground">@null</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowAnimationStyle">@null</item>
+        <item name="android:windowDisablePreview">true</item>
+        <item name="android:windowNoDisplay">true</item>
+    </style>
+
+    <!-- preference dialog with password style -->
+    <style name="PasswordEditTextDialogStyle" parent="Preference.DialogPreference.EditTextPreference">
+        <item name="android:dialogLayout">@layout/preference_dialog_password_edittext</item>
+    </style>
+
+    <!-- preference dialog with e-mail style -->
+    <style name="UserNameEditTextDialogStyle" parent="Preference.DialogPreference.EditTextPreference">
+        <item name="android:dialogLayout">@layout/preference_dialog_username_edittext</item>
+    </style>
+
+    <style name="TextAppearanceSubtitleStyle" parent="TextAppearance.AppCompat.Display1">
+        <item name="background">@color/colorTransparent</item>
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
+    <style name="AppThemeDark" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:windowActionBarOverlay">true</item>
+        <item name="android:padding">0dp</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@android:color/background_dark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="preferenceTheme">@style/PreferenceThemeOverlay</item>
+    </style>
+
+</resources>

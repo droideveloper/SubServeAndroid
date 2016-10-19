@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:id="@+id/actionView"
+              android:orientation="horizontal"
+              android:layout_weight="5"
+              android:gravity="center_vertical"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/prevButtonView"
+        android:src="@drawable/ic_action_prev"
+        android:padding="5dp"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content" />
+
+    <ImageView
+        android:id="@+id/refreshButtonView"
+        android:src="@drawable/ic_action_refresh"
+        android:padding="5dp"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"  />
+
+    <ImageView
+        android:id="@+id/nextButtonView"
+        android:src="@drawable/ic_action_next"
+        android:padding="5dp"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"  />
+
+    <android.support.v4.widget.Space
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"/>
+
+    <ImageView
+        android:id="@+id/exitButtonView"
+        android:src="@drawable/ic_action_exit"
+        android:padding="5dp"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"  />
+
+</LinearLayout>

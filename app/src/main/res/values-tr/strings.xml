@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="user_name_title">Kullanıcı Adı</string>
+    <string name="user_name_summary">Hesap için kullanıcı adı (gerekli değil)</string>
+    <string name="password_title">Şifre</string>
+    <string name="password_summary">Hesap için şifre (gerekli değil)</string>
+    <string name="user_category">Kullanıcı</string>
+    <string name="setting_category">Ayarlar</string>
+    <string name="notify_title">Uyar</string>
+    <string name="notify_summary">Gösteriye başlaması için kullanıcıyı uyarır</string>
+    <string name="language_title">Diller</string>
+    <string name="language_summary">Seçilmiş dil(ler) alt yazı aramasında kullanılır</string>
+    <string name="text_size_title">İçerik Boyutu</string>
+    <string name="text_size_summary">İçerik boyutu gösterilen içeriklerde kullanılır</string>
+    <string name="text_color_title">İçerik Rengi</string>
+    <string name="text_color_summary">İçerik rengi gösterilen içeriklerde kullanılır</string>
+    <string name="text_alignment_title">İçerik Yerleştirmsi</string>
+    <string name="text_alignment_summary">İçerik yerleştirmesi gösterilen içeriklerde kullanılır</string>
+</resources>

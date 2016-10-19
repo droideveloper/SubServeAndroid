@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resource>
+   <key>
+      <item>afr</item>
+      <item>alb</item>
+      <item>ara</item>
+      <item>arm</item>
+      <item>ast</item>
+      <item>aze</item>
+      <item>baq</item>
+      <item>bel</item>
+      <item>ben</item>
+      <item>bos</item>
+      <item>bre</item>
+      <item>bul</item>
+      <item>bur</item>
+      <item>cat</item>
+      <item>chi</item>
+      <item>zht</item>
+      <item>zhe</item>
+      <item>hrv</item>
+      <item>cze</item>
+      <item>dan</item>
+      <item>dut</item>
+      <item>eng</item>
+      <item>epo</item>
+      <item>est</item>
+      <item>ext</item>
+      <item>fin</item>
+      <item>fre</item>
+      <item>glg</item>
+      <item>geo</item>
+      <item>ger</item>
+      <item>ell</item>
+      <item>heb</item>
+      <item>hin</item>
+      <item>hun</item>
+      <item>ice</item>
+      <item>ind</item>
+      <item>ita</item>
+      <item>jpn</item>
+      <item>kaz</item>
+      <item>khm</item>
+      <item>kor</item>
+      <item>lav</item>
+      <item>lit</item>
+      <item>ltz</item>
+      <item>mac</item>
+      <item>may</item>
+      <item>mal</item>
+      <item>mni</item>
+      <item>mon</item>
+      <item>mne</item>
+      <item>nor</item>
+      <item>oci</item>
+      <item>per</item>
+      <item>pol</item>
+      <item>por</item>
+      <item>pob</item>
+      <item>pom</item>
+      <item>rum</item>
+      <item>rus</item>
+      <item>scc</item>
+      <item>sin</item>
+      <item>slo</item>
+      <item>slv</item>
+      <item>spa</item>
+      <item>swa</item>
+      <item>swe</item>
+      <item>syr</item>
+      <item>tgl</item>
+      <item>tam</item>
+      <item>tel</item>
+      <item>tha</item>
+      <item>tur</item>
+      <item>ukr</item>
+      <item>urd</item>
+      <item>vie</item>
+   </key>
+   <value>
+      <item>Afrikaans</item>
+      <item>Arnavutça</item>
+      <item>Arapça</item>
+      <item>Ermenice</item>
+      <item>Asturian</item>
+      <item>Azerbaijani</item>
+      <item>Basque</item>
+      <item>Belarusian</item>
+      <item>Bengali</item>
+      <item>Boşnakça</item>
+      <item>Breton</item>
+      <item>Bulgarca</item>
+      <item>Burmese</item>
+      <item>Katalanca</item>
+      <item>Chinese (simplified)</item>
+      <item>Chinese (traditional)</item>
+      <item>Chinese bilingual</item>
+      <item>Hırvatça</item>
+      <item>Çekçe</item>
+      <item>Danimarkaca</item>
+      <item>Flemenkçe</item>
+      <item>İngilizce</item>
+      <item>Esperanto</item>
+      <item>Estonya Dili</item>
+      <item>Extremaduran</item>
+      <item>Fince</item>
+      <item>Fransızca</item>
+      <item>Galician</item>
+      <item>Georgian</item>
+      <item>Almanca</item>
+      <item>Yunanca</item>
+      <item>İbranice</item>
+      <item>Hindi</item>
+      <item>Macarca</item>
+      <item>Icelandic</item>
+      <item>Endonezya Dili</item>
+      <item>İtalyanca</item>
+      <item>Japonca</item>
+      <item>Kazakça</item>
+      <item>Khmer</item>
+      <item>Korece</item>
+      <item>Letonya Dili</item>
+      <item>Lintvanya Dili</item>
+      <item>Lüksemburg Dili</item>
+      <item>Makedonca</item>
+      <item>Malay</item>
+      <item>Malayalam</item>
+      <item>Manipuri</item>
+      <item>Mongolian</item>
+      <item>Montenegrin</item>
+      <item>Norveççe</item>
+      <item>Occitan</item>
+      <item>Farsça</item>
+      <item>Polonyaca</item>
+      <item>Portekizce</item>
+      <item>Portuguese (BR)</item>
+      <item>Portuguese (MZ)</item>
+      <item>Romence</item>
+      <item>Rusça</item>
+      <item>Sırpça</item>
+      <item>Sinhalese</item>
+      <item>Slovakça</item>
+      <item>Slovence</item>
+      <item>İspanyolca</item>
+      <item>Swahili</item>
+      <item>İsveççe</item>
+      <item>Syriac</item>
+      <item>Tagalog</item>
+      <item>Tamil</item>
+      <item>Telugu</item>
+      <item>Tai Dili</item>
+      <item>Türkçe</item>
+      <item>Ukraynaca</item>
+      <item>Urdu</item>
+      <item>Vietnam Dili</item>
+   </value>
+</resource>

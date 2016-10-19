@@ -1,0 +1,38 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 24
+    buildToolsVersion "24.0.2"
+
+    defaultConfig {
+        applicationId "org.fs.sub"
+        minSdkVersion 17 //because javascript hack would ruin me
+        targetSdkVersion 24
+        versionCode 1
+        versionName "1.0"
+
+        //testInstrumentationRunner "android.test.InstrumentationTestRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    //color picker preference ?
+    compile project(':core')
+    compile project(':subserve_api')
+    /*unit tests*/
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:appcompat-v7:24.2.1'
+    compile 'com.j256.ormlite:ormlite-android:4.48'
+    compile 'com.android.support:design:24.2.1'
+    compile 'com.android.support:preference-v7:24.2.1'
+    compile 'com.rarepebble:colorpicker:1.7.0'
+    compile 'com.android.support:support-v4:24.2.1'
+}
