@@ -180,17 +180,10 @@ public class LoginServiceViewPresenter extends AbstractPresenter<ILoginServiceVi
   /*
       life-cycles are useless
   */
-  @Override public void onCreate() {
-  }
-
-  @Override public void onDestroy() {
-  }
-
-  @Override public void onStart() {
-  }
-
-  @Override public void onStop() {
-  }
+  @Override public void onCreate()  {}
+  @Override public void onDestroy() {}
+  @Override public void onStart()   {}
+  @Override public void onStop()    {}
 
   private Parameter firstParam(XMLRpcResponse resp) {
     Parameter param = null;

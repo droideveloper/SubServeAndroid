@@ -129,11 +129,8 @@ public class BrowserViewPresenter extends AbstractPresenter<IBrowserView> implem
     SubServeAPI.onCreate(view.getContext());
   }
 
-  @Override public void onStart() {
-  }
-
-  @Override public void onStop() {
-  }
+  @Override public void onStart() {}
+  @Override public void onStop()  {}
 
   @Override public void onDestroy() {
     SubServeAPI.onDestroy();

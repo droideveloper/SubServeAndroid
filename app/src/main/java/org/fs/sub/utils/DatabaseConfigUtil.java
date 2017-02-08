@@ -24,15 +24,9 @@ import java.sql.SQLException;
 
 public class DatabaseConfigUtil extends OrmLiteConfigUtil {
 
-  private final static Class<?>[] clazzes = new Class<?>[] { SrtEntity.class };
+  private final static Class<?>[] types = new Class<?>[] { SrtEntity.class };
 
-  /**
-   * this method used for generating classes for related db system and sqlite database
-   *
-   * @throws SQLException
-   * @throws IOException
-   */
   public static void main(String... args) throws SQLException, IOException {
-    writeConfigFile("ormlite_config.txt", clazzes);
+    writeConfigFile("ormlite_config.txt", types);
   }
 }

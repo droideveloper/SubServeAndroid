@@ -78,9 +78,6 @@ public class ServiceViewPresenter extends AbstractPresenter<IServiceView> implem
 
   private Subscription eventListener;
 
-  /*
-      this is the session control, keep making request available
-   */
   private final Runnable sessionWorker = new Runnable() {
     @Override public void run() {
       Intent intent = new Intent(view.getContext(), LoginServiceView.class);
@@ -90,9 +87,6 @@ public class ServiceViewPresenter extends AbstractPresenter<IServiceView> implem
     }
   };
 
-  /*
-      this is elapsed time control, keep showing text available
-   */
   private final Runnable backgroundWorker = new Runnable() {
     @Override public void run() {
       setElapsedTime(elapsedTime() + EXPECTED_INTERVAL);
@@ -152,9 +146,6 @@ public class ServiceViewPresenter extends AbstractPresenter<IServiceView> implem
         setElapsedTime(time);
       }
     }
-
-        /*log(Log.ERROR,
-            String.format(Locale.ENGLISH, "intent={ %s }\nstate={ %s }", intent.toString(), currentState));*/
   }
 
   @Override public void setSearchUri(Uri uri) {
@@ -242,18 +233,8 @@ public class ServiceViewPresenter extends AbstractPresenter<IServiceView> implem
     }
   }
 
-  /*
-      These life-cycle callbacks not been called
-      because component is Service instance
-   */
-  @Override public void onStart() {
-  }
-
-  @Override public void onStop() {
-  }
-    /*
-        Non-Used component callbacks end here
-     */
+  @Override public void onStart() {}
+  @Override public void onStop()  {}
 
   private IDatabaseHelper databaseProxy() {
     return view.applicationProxy().databaseProxy();
@@ -271,9 +252,6 @@ public class ServiceViewPresenter extends AbstractPresenter<IServiceView> implem
     return view.applicationProxy().downloadProxy();
   }
 
-  /*
-      search in local database
-   */
   private ISearchSrtEntityUseCase createSearchUseCase(HashFoundEvent hashFoundEvent) {
     return new SearchSrtEntityUseCase(this, serviceProxy(), downloadProxy(), hashFoundEvent,
         preferenceProxy(), databaseProxy(), null);
@@ -283,11 +261,6 @@ public class ServiceViewPresenter extends AbstractPresenter<IServiceView> implem
     return new SearchSrtEntityUseCase(this, serviceProxy(), downloadProxy(), null, preferenceProxy(), databaseProxy(), imdb);
   }
 
-  /**
-   * sets up session
-   * that service will handle our
-   * login mechanism to use serviceProxy
-   */
   private void setUpSession() {
     backgroundHandler.postDelayed(sessionWorker, SESSION_INTERVAL);//session start
     Intent intent = new Intent(view.getContext(), LoginServiceView.class);
@@ -295,11 +268,6 @@ public class ServiceViewPresenter extends AbstractPresenter<IServiceView> implem
     view.toServiceCommand(intent);
   }
 
-  /**
-   * tears down session
-   * that service will handle our
-   * logout mechanism as good citizen
-   */
   private void tearDownSession() {
     backgroundHandler.removeCallbacks(sessionWorker);//session cancel
     Intent intent = new Intent(view.getContext(), LoginServiceView.class);
@@ -307,10 +275,6 @@ public class ServiceViewPresenter extends AbstractPresenter<IServiceView> implem
     view.toServiceCommand(intent);
   }
 
-  /**
-   * method is light-weight algorithm for pooling sequence in order to chekc and show in proper time
-   * zone
-   */
   private void checkIfTextMatch() {
     if (collection != null) {
       if (StringUtility.isNullOrEmpty(currentSequence)) {
@@ -336,12 +300,6 @@ public class ServiceViewPresenter extends AbstractPresenter<IServiceView> implem
     }
   }
 
-  /**
-   * finds where we left of since the api try to go forward always yet sometimes users can skip back
-   * or further so...
-   *
-   * @param ms current ms stated from application
-   */
   private void checkIfTimeIsElastic(long ms) {
     synchronized (mutex) {
       if (collection != null) {
@@ -353,18 +311,11 @@ public class ServiceViewPresenter extends AbstractPresenter<IServiceView> implem
     }
   }
 
-  /**
-   * @param str check if text is there.
-   * @return SpannableString instance.
-   */
   private boolean textIfAlreadySet(SpannableString str) {
     String text = str.toString();
     return text.equalsIgnoreCase(view.getText());
   }
 
-  /**
-   *
-   */
   private void clearIfNecessaryAndSetUpNext() {
     backgroundHandler.removeCallbacks(backgroundWorker);
     backgroundHandler.postDelayed(backgroundWorker, EXPECTED_INTERVAL);
@@ -401,9 +352,6 @@ public class ServiceViewPresenter extends AbstractPresenter<IServiceView> implem
     notifyManager.cancel(NOTIFICATION_ID);
   }
 
-  /*
-      Event Callback
-   */
   @Override public void onHashFound(HashFoundEvent hashEvent) {
     if (hashEvent != null) {
       searchSrtEntityUseCaseProxy = createSearchUseCase(hashEvent);

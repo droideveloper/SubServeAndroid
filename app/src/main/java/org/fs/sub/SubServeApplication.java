@@ -44,7 +44,6 @@ public class SubServeApplication extends AbstractApplication implements ISubServ
     super.onCreate();
     Retrofit retrofit = createRetrofit();
 
-    //these are essential parts of application
     serviceProxy = retrofit.create(IServiceEndpoint.class);
     databaseProxy = new DatabaseHelper(getApplicationContext());
     downloadProxy = new DownloadHelper(databaseProxy);

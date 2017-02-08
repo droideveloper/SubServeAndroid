@@ -16,6 +16,6 @@
 package org.fs.sub.events;
 
 public enum ApplicationState {
-    STATE_START,
-    STATE_STOP,
+  STATE_START,
+  STATE_STOP
 }

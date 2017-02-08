@@ -24,38 +24,16 @@ import org.fs.sub.events.SrtEntityNotFoundEvent;
 
 public interface IServiceEvent {
 
-  /**
-   * We will recieve hash events here
-   */
+
   void onHashFound(HashFoundEvent hashEvent);
 
-  /**
-   *
-   * @param hashEvent
-   */
   void onHashNotFound(HashNotFoundEvent hashEvent);
 
-  /**
-   *
-   * @param sequenceEvent
-   */
   void onSequenceFound(SequenceFoundEvent sequenceEvent);
 
-  /**
-   *
-   * @param sequenceEvent
-   */
   void onSequenceNotFound(SequenceNotFoundEvent sequenceEvent);
 
-  /**
-   *
-   * @param srtEvent
-   */
   void onSrtEntityFound(SrtEntityFoundEvent srtEvent);
 
-  /**
-   *
-   * @param srtEvent
-   */
   void onSrtEntityNotFound(SrtEntityNotFoundEvent srtEvent);
 }

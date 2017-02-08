@@ -24,33 +24,13 @@ import org.fs.sub.net.IServiceEndpoint;
 
 public interface ILoginServiceView extends IView {
 
-  /**
-   *
-   * @return
-   */
   Context context();
 
-  /**
-   *
-   * @return
-   */
   ISubServeView anyApplication();
 
-  /**
-   *
-   * @return
-   */
   IPreference preferenceProxy();
 
-  /**
-   *
-   * @return
-   */
   IServiceEndpoint serviceProxy();
 
-  /**
-   *
-   * @return
-   */
   AlarmManager alarmManager();
 }

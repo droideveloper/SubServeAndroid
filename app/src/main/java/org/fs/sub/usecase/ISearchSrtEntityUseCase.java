@@ -28,53 +28,21 @@ import rx.functions.Action1;
 
 public interface ISearchSrtEntityUseCase extends IUseCase {
 
-  /**
-   *
-   * @param errorEvent
-   */
   void checkIfLocalError(SrtEntityNotFoundEvent errorEvent);
 
-  /**
-   * @throws IOException
-   */
   String parse(XMLRpcRequest request) throws IOException;
 
-  /**
-   *
-   * @param request
-   * @return
-   */
   Observable<String> observerXMLRpcRequest(XMLRpcRequest request);
 
-  /**
-   *
-   * @return
-   */
   Action1<String> successCallback();
 
-  /**
-   *
-   * @return
-   */
   Action1<Throwable> errorCallback();
 
   void execute();
 
-  /**
-   *
-   * @param srtEvent
-   */
   void onSrtEntityFound(SrtEntityFoundEvent srtEvent);
 
-  /**
-   *
-   * @param srtEvent
-   */
   void onSrtEntityNotFound(SrtEntityNotFoundEvent srtEvent);
 
-  /**
-   *
-   * @param tokenEvent
-   */
   void onServerTokenValid(ServerTokenEvent tokenEvent);
 }

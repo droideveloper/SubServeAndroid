@@ -16,8 +16,8 @@
 package org.fs.sub.events;
 
 public enum ActionEvent {
-    GO_BACK,
-    GO_NEXT,
-    REFRESH,
-    EXIT
+  GO_BACK,
+  GO_NEXT,
+  REFRESH,
+  EXIT
 }

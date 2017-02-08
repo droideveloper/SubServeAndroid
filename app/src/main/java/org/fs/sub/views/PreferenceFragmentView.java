@@ -33,8 +33,7 @@ public class PreferenceFragmentView extends AbstractPreferenceFragment implement
     addPreferencesFromResource(R.xml.preferences);
   }
 
-  @Override public void onCreatePreferences(Bundle bundle, String s) {
-  }
+  @Override public void onCreatePreferences(Bundle bundle, String s) { }
 
   @Override public void onDisplayPreferenceDialog(Preference preference) {
     //if you want to show custom view on preference click, then do not forget to implement this

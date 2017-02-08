@@ -17,6 +17,4 @@ package org.fs.sub.events;
 
 import org.fs.common.IEvent;
 
-public final class ServerTokenEvent implements IEvent {
-
-}
+public final class ServerTokenEvent implements IEvent { }

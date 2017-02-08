@@ -23,36 +23,15 @@ import org.fs.sub.model.SrtEntity;
 
 public interface IDatabaseHelper {
 
-  /**
-   *
-   * @param hash
-   */
   void withHashAndFirst(@NonNull String hash);
 
-  /**
-   * @param hash HASH of Media File
-   */
   void withHashAndLangAndFirst(@NonNull String hash, @NonNull String lang);
 
-  /**
-   * @param imdb IMDB_ID
-   */
   void withImdbAndLangAndFirst(@NonNull String imdb, @NonNull String lang);
 
-  /**
-   *
-   * @param entity
-   */
   void withUpdateOrSaveSrtEntity(@NonNull SrtEntity entity);
 
-  /**
-   * Release resources such as Dao objects created by OrmLite library.
-   */
   void releaseAll();
 
-  /**
-   *
-   * @return
-   */
   RuntimeExceptionDao<SrtEntity, Long> getSrtEntityRuntimeDao();
 }

@@ -25,8 +25,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.LinearLayout;
 
-
 public class ColorPreference extends DialogPreference {
+
   private final String selectNoneButtonText;
   private final Integer defaultColor;
   private final String noneSelectedSummaryText;

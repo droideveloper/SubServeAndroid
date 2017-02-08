@@ -230,9 +230,6 @@ public class SearchSrtEntityUseCase implements ISearchSrtEntityUseCase {
     };
   }
 
-  /**
-   * checks error count and might try again if needed
-   */
   private void checkTryCountAndRequestAgain() {
     Handler handler = new Handler(Looper.getMainLooper());
     tryCount++;//then we check if we hit 3

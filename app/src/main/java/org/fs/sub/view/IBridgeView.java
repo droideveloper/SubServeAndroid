@@ -22,15 +22,7 @@ import org.fs.common.IView;
 
 public interface IBridgeView extends IView {
 
-  /**
-   *
-   * @param intent
-   */
   void sendCommand(Intent intent);
 
-  /**
-   *
-   * @return
-   */
   Context getContext();
 }

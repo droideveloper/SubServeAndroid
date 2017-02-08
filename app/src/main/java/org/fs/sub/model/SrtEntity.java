@@ -46,16 +46,12 @@ public final class SrtEntity extends AbstractEntity {
 
   @DatabaseField(columnName = CLM_DATA, dataType = DataType.BYTE_ARRAY) private byte[] data;
 
-  public SrtEntity(Parcel input) {
+  private SrtEntity(Parcel input) {
     super(input);
   }
 
-  public SrtEntity() {
-  }
+  public SrtEntity() { }
 
-  /**
-   * Getters and Setters
-   */
   public Long id() {
     return id;
   }
@@ -104,30 +100,14 @@ public final class SrtEntity extends AbstractEntity {
     this.lang = lang;
   }
 
-  /**
-   * End of Getters and Setters
-   */
-
-  /**
-   *
-   * @return
-   */
   @Override protected String getClassTag() {
     return SrtEntity.class.getSimpleName();
   }
 
-  /**
-   *
-   * @return
-   */
   @Override protected boolean isLogEnabled() {
     return SubServeApplication.isApplicationLogEnabled();
   }
 
-  /**
-   *
-   * @param input
-   */
   @Override protected void readParcel(Parcel input) {
     id(input.readLong());
     hash(input.readString());
@@ -137,19 +117,10 @@ public final class SrtEntity extends AbstractEntity {
     input.readByteArray(data);
   }
 
-  /**
-   *
-   * @return
-   */
   @Override public int describeContents() {
     return 0;
   }
 
-  /**
-   *
-   * @param out
-   * @param flags
-   */
   @Override public void writeToParcel(Parcel out, int flags) {
     out.writeLong(id());
     if (!StringUtility.isNullOrEmpty(hash())) {

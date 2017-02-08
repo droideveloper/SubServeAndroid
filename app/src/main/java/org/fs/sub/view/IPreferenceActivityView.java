@@ -17,6 +17,4 @@ package org.fs.sub.view;
 
 import org.fs.common.IView;
 
-public interface IPreferenceActivityView extends IView {
-
-}
+public interface IPreferenceActivityView extends IView {}

@@ -107,19 +107,8 @@ public class ServiceView extends AbstractService implements IServiceView, ViewSw
     stopSelf();
   }
 
-  @Override public void pauseShow() {
-    //        if(textSwitcher != null) {
-    //            //textSwitcher.setVisibility(View.GONE);//also cause animation problems
-    //            //setText(new SpannableString(""));
-    //        }
-  }
-
-  @Override public void resumeShow() {
-    //        if(textSwitcher != null) {
-    //            //textSwitcher.setVisibility(View.VISIBLE);//this cause animation problems
-    //            //setText(new SpannableString(""));
-    //        }
-  }
+  @Override public void pauseShow()   {}
+  @Override public void resumeShow()  {}
 
   @Nullable @Override public IBinder onBind(Intent intent) {
     return null;

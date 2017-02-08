@@ -22,24 +22,11 @@ import org.fs.common.IPresenter;
 
 public interface ILoginServiceViewPresenter extends IPresenter {
 
-  /**
-   * @throws IOException
-   */
   void withUserNameAndPassword(String userName, String password) throws IOException;
 
-  /**
-   * @throws IOException
-   */
   void withSessionToken(String token) throws IOException;
 
-  /**
-   * @throws IOException
-   */
   void withTerminateSession(String token) throws IOException;
 
-  /**
-   *
-   * @param args
-   */
   void onCommand(Bundle args);
 }

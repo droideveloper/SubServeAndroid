@@ -22,27 +22,11 @@ import org.fs.sub.net.IServiceEndpoint;
 
 public interface ISubServeView {
 
-  /**
-   *
-   * @return
-   */
   IDatabaseHelper databaseProxy();
 
-  /**
-   *
-   * @return
-   */
   IDownloadHelper downloadProxy();
 
-  /**
-   *
-   * @return
-   */
   IServiceEndpoint serviceProxy();
 
-  /**
-   *
-   * @return
-   */
   IPreference preferenceProxy();
 }

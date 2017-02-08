@@ -73,9 +73,6 @@ public final class SrtSequenceEntity extends AbstractEntity {
   private long end;
   private SpannableString text;
 
-  /**
-   * @return SrtSequence entity or throw exception
-   */
   public static SrtSequenceEntity create(String... data) {
     PreconditionUtility.checkNotNull(data, "you are screwed");
     int size = data.length;
@@ -96,10 +93,6 @@ public final class SrtSequenceEntity extends AbstractEntity {
     return entity;
   }
 
-  /**
-   * @return LinkedList instance
-   * @throws IOException
-   */
   public static LinkedList<SrtSequenceEntity> create(byte[] array, String lang) throws IOException {
     LinkedList<SrtSequenceEntity> queue = new LinkedList<>();
     InputStream is = null;
@@ -130,35 +123,18 @@ public final class SrtSequenceEntity extends AbstractEntity {
     }
   }
 
-  /**
-   * computes if passed time as long equals then object's alive time
-   *
-   * @param ms time
-   * @param entity entity
-   * @return true or false depends of variables passed in method
-   */
   public static boolean isBetween(long ms, SrtSequenceEntity entity) {
     return ms >= entity.getBegin() && ms <= entity.getEnd();
   }
 
-  /**
-   * computes if passed time as long lower then object's alive time
-   */
   public static boolean isNotYet(long ms, SrtSequenceEntity entity) {
     return ms < entity.getBegin() && ms < entity.getEnd();
   }
 
-  /**
-   * computes if passed time as long bigger then object's alive time
-   */
   public static boolean isOverDue(long ms, SrtSequenceEntity entity) {
     return ms > entity.getBegin() && ms > entity.getEnd();
   }
 
-  /**
-   * strips text from unnecessary tags of html and matching ones placed with font options
-   * in textView conjecture
-   */
   private static int toInteger(String str) {
     try {
       return Integer.parseInt(str.replaceAll("[^\\d]", ""));//try to replace anything expect digits

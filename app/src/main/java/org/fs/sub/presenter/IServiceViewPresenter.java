@@ -21,68 +21,27 @@ import org.fs.common.IPresenter;
 
 public interface IServiceViewPresenter  extends IPresenter {
 
-  /**
-   *
-   * @param intent
-   */
   void handleIntent(Intent intent);
 
-  /**
-   *
-   * @param elapsedTime
-   */
   void setElapsedTime(long elapsedTime);
 
-  /**
-   *
-   * @return
-   */
   long elapsedTime();
 
-  /**
-   *
-   * @param uri
-   */
   void setSearchUri(Uri uri);
 
-  /**
-   *
-   * @param imdb
-   */
   void setSearchImdb(String imdb);
 
-  /**
-   *
-   */
   void notifyElapsedChanged();
 
-  /**
-   *
-   */
   void startShow();
 
-  /**
-   *
-   */
   void stopShow();
 
-  /**
-   *
-   */
   void pauseShow();
 
-  /**
-   *
-   */
   void resumeShow();
 
-  /**
-   * context callback onCreate
-   */
   void onCreate();
 
-  /**
-   * context callback onDestroy
-   */
   void onDestroy();
 }

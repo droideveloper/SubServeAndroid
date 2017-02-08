@@ -27,12 +27,12 @@ import org.fs.sub.views.ServiceView;
 
 public class BridgeViewPresenter extends AbstractPresenter<IBridgeView> implements IBridgeViewPresenter {
 
-  private static final String HOST_SEARCH = "search";
+  private static final String HOST_SEARCH       = "search";
   private static final String HOST_TIME_ELAPSED = "timeElapsed";
-  private static final String HOST_START = "start";
-  private static final String HOST_STOP = "stop";
-  private static final String HOST_RESUME = "resume";
-  private static final String HOST_PAUSE = "pause";
+  private static final String HOST_START        = "start";
+  private static final String HOST_STOP         = "stop";
+  private static final String HOST_RESUME       = "resume";
+  private static final String HOST_PAUSE        = "pause";
 
   public BridgeViewPresenter(IBridgeView view) {
     super(view);
@@ -119,21 +119,9 @@ public class BridgeViewPresenter extends AbstractPresenter<IBridgeView> implemen
     return Long.parseLong(q);
   }
 
-  //these life-cycle callbacks will not be used
 
-  @Override public void onCreate() {
-
-  }
-
-  @Override public void onDestroy() {
-
-  }
-
-  @Override public void onStart() {
-
-  }
-
-  @Override public void onStop() {
-
-  }
+  @Override public void onCreate()  {}
+  @Override public void onDestroy() {}
+  @Override public void onStart()   {}
+  @Override public void onStop()    {}
 }
